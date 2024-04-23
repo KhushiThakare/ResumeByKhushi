@@ -1,0 +1,153 @@
+/* General Styles */
+.paper.content1 {
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px); /* Adjusted height */
+  padding: 20px 10px 200px 20px; /* Adding padding to create space at the bottom */
+}
+
+/* Hiding overflow for other elements */
+.app,
+.root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.paper {
+  color: #000;
+  height: 100%;
+  flex-direction: column;
+  box-shadow: none;
+  display: flex;
+}
+
+.content2 {
+  background-color: #6e91b6 !important;
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Image and Upload Button */
+.upload-btn {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.app .root .paper.content1 button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Profile Image */
+#profile-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Container Styles */
+.contain {
+  padding: 20px;
+  height: auto;
+  display: flex;
+  width: 100%;
+  border: 2px solid white;
+  background-color: #ffffff;
+}
+
+/* Part Styles */
+.part {
+  flex: 1; /* 20% width for the first part */
+  border: 1px solid red;
+}
+
+.part1 {
+  height: 100%;
+  width: 20%;
+  flex: 0 0 20%; /* 20% width for the first part */
+  background-color: #537598;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+/* Button Styles */
+Button {
+  margin-top: 10px;
+  align-self: center;
+}
+/* CSS for PDFDownloadLink */
+.downloadButton {
+  padding: 10px 20px;
+  background-color: rgb(7, 31, 102);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.downloadButton:hover {
+  background-color: rgb(17, 58, 181);
+}
+
+.loadingText {
+  color: #555;
+  font-style: italic;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .paper.content1 {
+    max-height: calc(100vh - 160px); /* Adjusted height for smaller screens */
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+  .paper.content2 {
+    overflow: visible; /* Show overflow for content2 */
+  }
+  .app,
+  .root {
+    height: auto; /* Allow content to expand */
+    overflow: visible; /* Show overflow */
+  }
+  .upload-btn {
+    width: 60px;
+    height: 60px;
+  }
+  #profile-img {
+    height: 80px;
+    width: 80px;
+  }
+  .part1 {
+    width: 100%; /* Occupy full width for the first part */
+    border-radius: 0; /* Adjust border-radius */
+  }
+}
+
+/* Tablets and larger screens */
+@media (min-width: 601px) {
+  .paper.content1 {
+    max-height: calc(100vh - 200px); /* Adjusted height for tablets */
+  }
+  .upload-btn {
+    width: 80px;
+    height: 80px;
+  }
+  #profile-img {
+    height: 100px;
+    width: 100px;
+  }
+  .part1 {
+    width: 20%; /* Restore width for tablets */
+    border-radius: 10px 0px 0px 10px;
+  }
+}

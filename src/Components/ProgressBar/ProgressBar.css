@@ -1,0 +1,47 @@
+/* Example CSS for Progress Bar */
+.progress-data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 5px;
+    gap: 5px;
+  }
+  .progress-bar {
+    width:100%;
+    background-color: #ddd;
+    height: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-radius: 5px;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: rgb(252, 40, 111);
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+  }
+  .progress-head{
+    display: flex;
+    gap: 5px;
+
+  }
+  .progress-txt{
+    margin-top: 5px;
+    font-size: 13px;
+    color: grey;
+    font-weight: 600;
+  }
+  .progress-count{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 8px;
+    background-color:rgb(252, 40, 111);
+  }
